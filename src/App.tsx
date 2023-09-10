@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "assets/css/components.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Job from "components/z-page/signUp/Job";
 import Agency from "components/z-page/signUp/Agency";

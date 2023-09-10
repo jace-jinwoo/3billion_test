@@ -1,0 +1,19 @@
+/* React-Search-Autocomplete */
+/* // to target the search icon */
+.search .wrapper:first-child svg {
+  /* border: 4px solid blue !important; */
+}
+
+/* // to target the input element */
+.search .wrapper:first-child input {
+  /* border: 4px solid orange; */
+}
+
+/* // to target the wrapper element */
+.search .wrapper:first-child {
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+.search .wrapper:first-child input::placeholder {
+  color: #bec2cc;
+}

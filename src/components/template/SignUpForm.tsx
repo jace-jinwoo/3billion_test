@@ -36,6 +36,8 @@ function SignUpForm({ title, description, sub, Form }: SignUpFormType) {
   const location = useLocation();
   const navigate = useNavigate();
 
+  console.log("location :: ", location);
+
   const updatedLocation = {
     ...location,
     state: {
@@ -81,12 +83,11 @@ function SignUpForm({ title, description, sub, Form }: SignUpFormType) {
               // if (!location.state?.pageNum) navigate(path);
               console.log("pageNum :: ", location.state?.pageNum);
               console.log("updatedLocation :: ", updatedLocation);
-              const path = getPath(
-                location.state?.pageNum
-                  ? ++location.state.pageNum
-                  : updatedLocation.state.pageNum
-              );
-              navigate(path, { state: { pageNum: location.state?.pageNum } });
+              const pageNum = location.state?.pageNum
+                ? ++location.state.pageNum
+                : updatedLocation.state.pageNum;
+              const path = getPath(pageNum);
+              navigate(path, { state: { pageNum: pageNum } });
             }}
           />
         </ButtonWrapper>
